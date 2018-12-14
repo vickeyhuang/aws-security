@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Static website stack hosting
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "cf-demo-2.aws-training-xian.com"
+      WebsiteConfiguration:
+         IndexDocument: "index.html"

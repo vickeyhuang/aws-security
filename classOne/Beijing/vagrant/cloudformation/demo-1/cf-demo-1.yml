@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cloudformation-Demo-1-yml
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: "cf-demo-1-yml-update.aws-training-xian.com"

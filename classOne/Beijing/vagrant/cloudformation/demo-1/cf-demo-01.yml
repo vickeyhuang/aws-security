@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cloudformation-Demo-1
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: "huang.xiaoqing.aws-training-xian.com"
+  S3BucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+	  Properties:
+  	  BucketName: "huang.xiaoqing.aws-training-xian.com"
+      PolicyDocument:
+        Statement:
+        - Effect: Allow
+          Sid: PublicReadGetObject
+          Action:
+          - s3:GetObject
+          Resource: '*'
+          Principal: '*'

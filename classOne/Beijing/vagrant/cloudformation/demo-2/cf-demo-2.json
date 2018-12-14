@@ -1,0 +1,15 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Static website stack hosting with cf json",
+    "Resources": {
+        "S3Bucket": {
+            "Properties": {
+                "BucketName": "cf-demo-2-json.aws-training-xian.com",
+                "WebsiteConfiguration": {
+                    "IndexDocument": "index.html"
+                }
+            },
+            "Type": "AWS::S3::Bucket"
+        }
+    }
+}

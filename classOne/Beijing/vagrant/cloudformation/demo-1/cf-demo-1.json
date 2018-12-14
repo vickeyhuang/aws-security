@@ -1,0 +1,12 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Cloudformation-Demo-1-1-json",
+    "Resources": {
+        "S3Bucket": {
+            "Properties": {
+                "BucketName": "cf-demo-1-1.aws-training-xian.com"
+            },
+            "Type": "AWS::S3::Bucket"
+        }
+    }
+}

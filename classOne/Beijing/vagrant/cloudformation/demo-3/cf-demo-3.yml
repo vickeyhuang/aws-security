@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cloudformation-Demo-3-with-route53-website-hosting
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: "cf-demo-3.aws-training-xian.com"
+      WebsiteConfiguration:
+         IndexDocument: "index.html"
+
+  DNSRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      HostedZoneId: Z2EGCO5CG7C8FK
+      Name: 'cf-demo-3.aws-training-xian.com'
+      Type: CNAME
+      ResourceRecords: 
+      - cf-demo-3.aws-training-xian.com.s3-website-us-east-1.amazonaws.com
+      TTL: '60'
